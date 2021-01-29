@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Server\\Server Core\\Server Core.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\Server Core.csproj",
       "projectName": "Server Core",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Server\\Server Core\\Server Core.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\Server Core.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Server\\Server Core\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

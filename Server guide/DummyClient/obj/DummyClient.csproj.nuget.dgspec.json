@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Server\\DummyClient\\DummyClient.csproj": {}
+    "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\DummyClient\\DummyClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Server\\DummyClient\\DummyClient.csproj": {
+    "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\DummyClient\\DummyClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Server\\DummyClient\\DummyClient.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\DummyClient\\DummyClient.csproj",
         "projectName": "DummyClient",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Server\\DummyClient\\DummyClient.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\DummyClient\\DummyClient.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Server\\DummyClient\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\DummyClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
