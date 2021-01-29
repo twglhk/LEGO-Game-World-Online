@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.exe
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.deps.json
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.runtimeconfig.json
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.runtimeconfig.dev.json
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.dll
+C:\Users\User\source\repos\Server\Server Core\bin\Release\netcoreapp3.1\Server Core.pdb
+C:\Users\User\source\repos\Server\Server Core\obj\Release\netcoreapp3.1\Server Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Server\Server Core\obj\Release\netcoreapp3.1\Server Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Server\Server Core\obj\Release\netcoreapp3.1\Server Core.AssemblyInfo.cs
+C:\Users\User\source\repos\Server\Server Core\obj\Release\netcoreapp3.1\Server Core.dll
+C:\Users\User\source\repos\Server\Server Core\obj\Release\netcoreapp3.1\Server Core.pdb
