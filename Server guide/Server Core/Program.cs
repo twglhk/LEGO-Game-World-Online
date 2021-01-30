@@ -15,19 +15,16 @@ namespace Server_Core
         {
             try
             {
-                // 요청 사항 받기
-                byte[] recvBuff = new byte[1024];
-                int recvBytes = clientSocket.Receive(recvBuff);
-                string recvData = Encoding.UTF8.GetString(recvBuff, 0, recvBytes);
-                Console.WriteLine($"[From Client] {recvData}");
+                // 세션 생성 후 초기화
+                Session session = new Session();
+                session.Start(clientSocket);
 
-                // 보내기
                 byte[] sendBuff = Encoding.UTF8.GetBytes("Welcome!");
-                clientSocket.Send(sendBuff);
+                session.Send(sendBuff);
 
-                // 내보내기
-                clientSocket.Shutdown(SocketShutdown.Both);
-                clientSocket.Close();
+                Thread.Sleep(1000);
+
+                session.Disconnect();
             }
 
             catch (Exception e)
