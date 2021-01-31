@@ -15,7 +15,7 @@ namespace Server_Core
         {
             try
             {
-                // 세션 생성 후 초기화
+                // session creation and initialization
                 Session session = new Session();
                 session.Start(clientSocket);
 
@@ -36,9 +36,9 @@ namespace Server_Core
         static void Main(string[] args)
         {
             // DNS (Domain Name System)
-            string host = Dns.GetHostName();    // 이 컴퓨터의 호스트 이름
-            IPHostEntry ipHost = Dns.GetHostEntry(host);    // 호스트 입장 포인트 정보
-            IPAddress ipAddr = ipHost.AddressList[0];       // 호스트의 ip 주소 겟
+            string host = Dns.GetHostName();    
+            IPHostEntry ipHost = Dns.GetHostEntry(host);    
+            IPAddress ipAddr = ipHost.AddressList[0];       
             IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
              
             _listener.Init(endPoint, OnAcceptHandler);

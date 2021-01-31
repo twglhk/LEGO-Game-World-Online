@@ -11,36 +11,36 @@ namespace DummyClient
         static void Main(string[] args)
         {
             // DNS (Domain Name System)
-            string host = Dns.GetHostName();    // 이 컴퓨터의 호스트 이름
-            IPHostEntry ipHost = Dns.GetHostEntry(host);    // 호스트 입장 포인트 정보
-            IPAddress ipAddr = ipHost.AddressList[0];       // 호스트의 ip 주소 겟
+            string host = Dns.GetHostName();                // Host Name
+            IPHostEntry ipHost = Dns.GetHostEntry(host);    // Host Entry
+            IPAddress ipAddr = ipHost.AddressList[0];       // Host IP Address
             IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
 
             while(true)
             {
-                // 휴대폰 준비
+                // Socket Ready
                 Socket socket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
                 try
                 {
-                    // 문지기한테 입장 문의
+                    // Contact socket for entry
                     socket.Connect(endPoint);
                     Console.WriteLine($"Connected to {socket.RemoteEndPoint.ToString()}");
 
-                    // 보내기
+                    // Send
                     for (int i = 0; i < 5; ++i)
                     {
                         byte[] sendBuff = Encoding.UTF8.GetBytes($"Hello World {i}");
                         int sendBytes = socket.Send(sendBuff);
                     }
 
-                    // 받기
+                    // Recv
                     byte[] recvBuff = new byte[1024];
                     int recvByte = socket.Receive(recvBuff);
                     string recvData = Encoding.UTF8.GetString(recvBuff, 0, recvByte);
                     Console.WriteLine($"[From Server] {recvData}");
 
-                    // 나가기
+                    // Disconnect
                     socket.Shutdown(SocketShutdown.Both);
                     socket.Close();
                 }
