@@ -5,9 +5,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace Server_Core
+namespace ServerCore
 {
-    abstract class Session
+    public abstract class Session
     {
         Socket _socket;
         int _disconnected;

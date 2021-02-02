@@ -20,3 +20,6 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcor
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.AssemblyInfo.cs
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.dll
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.dll
+C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CopyComplete

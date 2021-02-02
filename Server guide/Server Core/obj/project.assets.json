@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\Server Core.csproj",
-      "projectName": "Server Core",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\Server Core.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj",
+      "projectName": "ServerCore",
+      "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\obj\\",
       "projectStyle": "PackageReference",

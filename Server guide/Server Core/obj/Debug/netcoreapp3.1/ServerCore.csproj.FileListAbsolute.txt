@@ -1,0 +1,8 @@
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\bin\Debug\netcoreapp3.1\ServerCore.deps.json
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\bin\Debug\netcoreapp3.1\ServerCore.dll
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\bin\Debug\netcoreapp3.1\ServerCore.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\obj\Debug\netcoreapp3.1\ServerCore.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\obj\Debug\netcoreapp3.1\ServerCore.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\obj\Debug\netcoreapp3.1\ServerCore.AssemblyInfo.cs
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\obj\Debug\netcoreapp3.1\ServerCore.dll
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server Core\obj\Debug\netcoreapp3.1\ServerCore.pdb
