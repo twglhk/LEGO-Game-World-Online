@@ -9,13 +9,13 @@ namespace Server_Core
     class Listener
     {
         Socket _listenSocket;
-        Action<Socket> _onAcceptHandler;
+        Func<Session> _sessionFactory;
 
-        public void Init(IPEndPoint endPoint, Action<Socket> onAcceptHandler)
+        public void Init(IPEndPoint endPoint, Func<Session> sessionFactory)
         {
             //Prepare listener socket
             _listenSocket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-            _onAcceptHandler += onAcceptHandler;
+            _sessionFactory += sessionFactory;
             _listenSocket.Bind(endPoint);
             _listenSocket.Listen(10);
 
@@ -37,8 +37,10 @@ namespace Server_Core
         {
             if (args.SocketError == SocketError.Success)
             {
-                // TO DO 
-                _onAcceptHandler.Invoke(args.AcceptSocket);
+                // session creation and initialization
+                Session session = _sessionFactory.Invoke();
+                session.Start(args.AcceptSocket);
+                session.OnConnected(args.AcceptSocket.RemoteEndPoint);
             }
 
             else

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
 namespace Server_Core
 {
-    class Session
+    abstract class Session
     {
         Socket _socket;
         int _disconnected;
@@ -16,6 +17,11 @@ namespace Server_Core
         List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>();
         SocketAsyncEventArgs _sendArgs = new SocketAsyncEventArgs();
         SocketAsyncEventArgs _recvArgs = new SocketAsyncEventArgs();
+
+        public abstract void OnConnected(EndPoint endPoint);
+        public abstract void OnRecv(ArraySegment<byte> buffer);
+        public abstract void OnSend(int numOfBytes);
+        public abstract void OnDisconnected(EndPoint endPoint);
 
         public void Start(Socket socket)
         {
@@ -45,6 +51,7 @@ namespace Server_Core
             if (Interlocked.Exchange(ref _disconnected, 1) == 1)
                 return;
 
+            OnDisconnected(_socket.RemoteEndPoint); // callback in GameSession
             _socket.Shutdown(SocketShutdown.Both);
             _socket.Close();
         }
@@ -78,7 +85,7 @@ namespace Server_Core
                         _sendArgs.BufferList = null;
                         _pendingList.Clear();
 
-                        Console.WriteLine($"Transferred bytes : {_sendArgs.BytesTransferred}");
+                        OnSend(_sendArgs.BytesTransferred); // callback in GameSession
 
                         if (_sendQueue.Count > 0)
                             RegisterSend();
@@ -109,8 +116,7 @@ namespace Server_Core
             {
                 try
                 {
-                    string recvData = Encoding.UTF8.GetString(args.Buffer, args.Offset, args.BytesTransferred);
-                    Console.WriteLine($"[From Client] {recvData}");
+                    OnRecv(new ArraySegment<byte>(args.Buffer, args.Offset, args.BytesTransferred));    // callback in GameSession
                     RegisterRecv();
                 }
                 catch (Exception e)
@@ -126,5 +132,17 @@ namespace Server_Core
         }
 
         #endregion
+
+        /// <summary>
+        /// Class that handle events in Session class
+        /// </summary>
+        [System.Obsolete]
+        class SessionHandler
+        {
+            public void OnConnected(EndPoint endPoint) { }
+            public void OnRecv(ArraySegment<byte> buffer) { }
+            public void OnSend(int numOfBytes) { }
+            public void OnDisconnected(EndPoint endPoint) { }
+        }
     }
 }
