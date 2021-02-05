@@ -15,7 +15,7 @@ namespace ServerCore
         ReceiveBuffer _recvBuffer = new ReceiveBuffer(1024);
 
         object _lock = new object();
-        Queue<byte[]> _sendQueue = new Queue<byte[]>(); // buff queue for sending
+        Queue<ArraySegment<byte>> _sendQueue = new Queue<ArraySegment<byte>>(); // buff queue for sending
         List<ArraySegment<byte>> _pendingList = new List<ArraySegment<byte>>();
         SocketAsyncEventArgs _sendArgs = new SocketAsyncEventArgs();
         SocketAsyncEventArgs _recvArgs = new SocketAsyncEventArgs();
@@ -35,7 +35,7 @@ namespace ServerCore
             RegisterRecv();
         }
 
-        public void Send(byte[] sendBuff)
+        public void Send(ArraySegment<byte> sendBuff)
         {
             lock (_lock)
             {
@@ -63,8 +63,8 @@ namespace ServerCore
             // check all queue buffs
             while (_sendQueue.Count > 0)
             {
-                byte[] buff = _sendQueue.Dequeue();
-                _pendingList.Add(new ArraySegment<byte>(buff, 0, buff.Length));
+                ArraySegment<byte> buff = _sendQueue.Dequeue();
+                _pendingList.Add(buff);
             }
 
             _sendArgs.BufferList = _pendingList;

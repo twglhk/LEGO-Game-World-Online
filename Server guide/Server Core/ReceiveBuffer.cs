@@ -43,6 +43,8 @@ namespace ServerCore
             {
                 // Copy remaining packet data to init offset
                 Array.Copy(_buffer.Array, _buffer.Offset + _readPos, _buffer.Array, _buffer.Offset, dataSize);
+                _readPos = 0;
+                _writePos = dataSize;
             }
         }
 
