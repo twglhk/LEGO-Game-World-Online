@@ -8,16 +8,7 @@ using System.Threading;
 
 namespace DummyClient
 {
-    public abstract class Packet
-    {
-        public ushort size;
-        public ushort packetId;
-
-        public abstract ArraySegment<byte> Write();
-        public abstract void Read(ArraySegment<byte> s);
-    }
-
-    class PlayerInfoReq : Packet
+    class PlayerInfoReq
     {
         public long playerId;
         public string name;
@@ -52,16 +43,11 @@ namespace DummyClient
             }
         }
 
-        public PlayerInfoReq()
-        {
-            this.packetId = (ushort)PacketID.PlayerInfoReq;
-        }
-
         /// <summary>
         /// Packet deserialization for reading from RecvBuffer
         /// </summary>
         /// <param name="segment"></param>
-        public override void Read(ArraySegment<byte> segment)
+        public void Read(ArraySegment<byte> segment)
         {
             ushort count = 0;
 
@@ -95,7 +81,7 @@ namespace DummyClient
         /// Packet serializeation for writing to SendBuffer
         /// </summary>
         /// <returns></returns>
-        public override ArraySegment<byte> Write()
+        public ArraySegment<byte> Write()
         {
             ArraySegment<byte> sendBufferSegment = SendBufferHelper.Open(4096);
             ushort count = 0;
@@ -104,7 +90,7 @@ namespace DummyClient
                 sendBufferSegment.Count);
 
             count += sizeof(ushort);
-            success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.packetId);
+            success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.PlayerInfoReq);
             count += sizeof(ushort);
             success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.playerId);
             count += sizeof(long);

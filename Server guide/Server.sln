@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerCore", "Server Core\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DummyClient", "DummyClient\DummyClient.csproj", "{9D91C5A5-FAB0-43C5-880A-43AA2D293DFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketGenerator", "PacketGenerator\PacketGenerator.csproj", "{8621A62D-26F9-4388-89FF-1BE8114D6059}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3AA5872F-0271-4337-A495-23FCDAC402D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{9D91C5A5-FAB0-43C5-880A-43AA2D293DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D91C5A5-FAB0-43C5-880A-43AA2D293DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D91C5A5-FAB0-43C5-880A-43AA2D293DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8621A62D-26F9-4388-89FF-1BE8114D6059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8621A62D-26F9-4388-89FF-1BE8114D6059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8621A62D-26F9-4388-89FF-1BE8114D6059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8621A62D-26F9-4388-89FF-1BE8114D6059}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8621A62D-26F9-4388-89FF-1BE8114D6059} = {3AA5872F-0271-4337-A495-23FCDAC402D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF8B9095-7F09-484E-B900-101994EF401D}
