@@ -24,10 +24,10 @@ namespace DummyClient
             PlayerInfoReq packet = new PlayerInfoReq() { 
                 playerId = 1001,
                 name = "HUMBA"};
-            packet.skills.Add(new PlayerInfoReq.SkillInfo() { id = 101, level = 1, duration = 3.0f });
-            packet.skills.Add(new PlayerInfoReq.SkillInfo() { id = 201, level = 1, duration = 2.0f });
-            packet.skills.Add(new PlayerInfoReq.SkillInfo() { id = 301, level = 1, duration = 1.0f });
-            packet.skills.Add(new PlayerInfoReq.SkillInfo() { id = 401, level = 1, duration = 0.0f });
+            packet.skills.Add(new PlayerInfoReq.Skill() { id = 101, level = 1, duration = 3.0f });
+            packet.skills.Add(new PlayerInfoReq.Skill() { id = 201, level = 1, duration = 2.0f });
+            packet.skills.Add(new PlayerInfoReq.Skill() { id = 301, level = 1, duration = 1.0f });
+            packet.skills.Add(new PlayerInfoReq.Skill() { id = 401, level = 1, duration = 0.0f });
 
             // Send
             ArraySegment<byte> s = packet.Write();
