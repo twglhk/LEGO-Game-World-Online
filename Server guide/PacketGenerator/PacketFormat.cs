@@ -147,7 +147,7 @@ count += sizeof({1});";
         // {0} : member name
         // {1} : member type
         public static string writeByteFormat =
-@"segment.Array[segment.Offset + count] = (byte)this.{0};
+@"sendBufferSegment.Array[sendBufferSegment.Offset + count] = (byte)this.{0};
 count += sizeof({1});";
 
         // {0} : member name

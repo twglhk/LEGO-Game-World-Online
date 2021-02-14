@@ -9,3 +9,9 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\ne
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\netcoreapp3.1\PacketGenerator.AssemblyInfo.cs
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\netcoreapp3.1\PacketGenerator.dll
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\netcoreapp3.1\PacketGenerator.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.exe
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.deps.json
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.runtimeconfig.json
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.runtimeconfig.dev.json
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.dll
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\bin\netcoreapp3.1\PacketGenerator.pdb
