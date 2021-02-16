@@ -10,6 +10,9 @@ namespace PacketGenerator
         static ushort packetId;
         static string packetEnums;
 
+        static string clinetRegister;
+        static string serverRegister;
+
         static void Main(string[] args)
         {
             string pdlPath = "../PDL.xml";
@@ -34,8 +37,12 @@ namespace PacketGenerator
                     //Console.WriteLine(r.Name + " " + r["name"]);
                 }
 
-                string fileText = string.Format(PacketFormat.FileFormat, packetEnums, genPackets);
+                string fileText = string.Format(PacketFormat.fileFormat, packetEnums, genPackets);
                 File.WriteAllText("GenPackets.cs", fileText);
+                string clientManagerText = string.Format(PacketFormat.managerFormat, clinetRegister);
+                File.WriteAllText("ClientPacketManager.cs", clientManagerText);
+                string serverManagerText = string.Format(PacketFormat.managerFormat, serverRegister);
+                File.WriteAllText("ServerPacketManager.cs", serverManagerText);
             }
         }
 
@@ -62,6 +69,13 @@ namespace PacketGenerator
                 packetName, t.Item1, t.Item2, t.Item3);
             packetEnums += string.Format(PacketFormat.packetEnumFormat, packetName, ++packetId)
                 + Environment.NewLine + "\t";
+
+            if (packetName.StartsWith("S_") || packetName.StartsWith("s_"))
+                clinetRegister += string.Format(PacketFormat.managerResisterFormat, packetName)
+                + Environment.NewLine;
+            else
+                serverRegister += string.Format(PacketFormat.managerResisterFormat, packetName)
+                + Environment.NewLine;
         }
 
         // {1} : member
