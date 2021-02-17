@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <PDL>
+  <packet name="C_Chat">
+    <string name="chat"/>
+  </packet>
+  <packet name="S_Chat">
+    <int name="playerId"/>
+    <string name="chat"/>
+  </packet>
+  <!--
   <packet name="C_PlayerInfoReq">
     <byte name="testByte"/>
     <long name="playerId"/>
@@ -13,4 +21,5 @@
   <packet name ="S_Test">
     <int name ="TestInt"/>
   </packet>
+  -->
 </PDL>
