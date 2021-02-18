@@ -23,3 +23,5 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcor
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.dll
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.pdb
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CopyComplete
+C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.genruntimeconfig.cache

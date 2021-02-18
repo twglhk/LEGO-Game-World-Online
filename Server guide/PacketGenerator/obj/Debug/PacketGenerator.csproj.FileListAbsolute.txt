@@ -9,3 +9,5 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\Pa
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.AssemblyInfo.cs
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.dll
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache

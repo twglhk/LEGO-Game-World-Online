@@ -13,7 +13,6 @@ class PacketHandler
     {
         C_Chat chatPacket = packet as C_Chat;
         ClientSession clientSession = session as ClientSession;
-        Console.WriteLine($"PlayerInfoRequest : {p.playerId}, {p.name}");
 
         if (clientSession.Room == null)
             return;

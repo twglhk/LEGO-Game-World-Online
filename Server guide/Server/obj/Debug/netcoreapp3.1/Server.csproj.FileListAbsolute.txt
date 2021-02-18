@@ -12,3 +12,5 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3
 C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete
 C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3.1\Server.dll
 C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3.1\Server.pdb
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Open-MMORPG\Server guide\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
