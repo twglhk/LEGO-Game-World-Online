@@ -106,6 +106,9 @@ namespace ServerCore
             if (_disconnected == 1)
                 return;
 
+            if (_socket == null)
+                return;
+
             // check all queue buffs
             while (_sendQueue.Count > 0)
             {

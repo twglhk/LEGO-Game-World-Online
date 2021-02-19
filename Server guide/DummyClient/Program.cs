@@ -22,7 +22,7 @@ namespace DummyClient
                 () => { return SessionManager.Instance.Generate(); },
                 10);
 
-            while(true)
+            while (true)
             {
                 try
                 {
