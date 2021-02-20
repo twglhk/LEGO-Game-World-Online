@@ -10,4 +10,4 @@
  - All comments should be written in English.
 
 ### Reference
- - All server guide code is coming from the lecture in Inflearn, [C#과 유니티로 만드는 MMORPG 게임 개발 시리즈](https://www.inflearn.com/course/%EC%9C%A0%EB%8B%88%ED%8B%B0-MMORPG-%EA%B0%9C%EB%B0%9C-part1#) , in Korean
+ - All server guide code is coming from the lecture in Inflearn, [here](https://www.inflearn.com/course/%EC%9C%A0%EB%8B%88%ED%8B%B0-MMORPG-%EA%B0%9C%EB%B0%9C-part1#) , in Korean
