@@ -14,6 +14,7 @@ namespace ServerCore
         public sealed override int OnRecv(ArraySegment<byte> buffer)
         {
             int processLen = 0;
+            int packetCount = 0;
             
             while (true)
             {
@@ -28,11 +29,16 @@ namespace ServerCore
 
                 // Use packet data
                 OnRecvPacket(new ArraySegment<byte>(buffer.Array, buffer.Offset, dataSize));
+                packetCount++;
 
                 // Prepare for the next packet in the packet buffer
                 processLen += dataSize;
                 buffer = new ArraySegment<byte>(buffer.Array, buffer.Offset + dataSize, buffer.Count - dataSize);
             }
+
+            // Test
+            if (packetCount > 1)
+                Console.WriteLine($"Gathered Packet recv count {packetCount}");
 
             return processLen; 
         }
@@ -45,7 +51,7 @@ namespace ServerCore
         Socket _socket;
         int _disconnected;
 
-        ReceiveBuffer _recvBuffer = new ReceiveBuffer(1024);
+        ReceiveBuffer _recvBuffer = new ReceiveBuffer(65535);
 
         object _lock = new object();
         Queue<ArraySegment<byte>> _sendQueue = new Queue<ArraySegment<byte>>(); // buff queue for sending
@@ -75,6 +81,24 @@ namespace ServerCore
             _sendArgs.Completed += new EventHandler<SocketAsyncEventArgs>(OnSendCompleted);
 
             RegisterRecv();
+        }
+
+        public void Send(List<ArraySegment<byte>> sendBuffList)
+        {
+            // Bufflist check for preventing non-data send
+            if (sendBuffList.Count == 0)
+                return;
+
+            lock (_lock)
+            {
+                foreach(var sendBuff in sendBuffList)
+                {
+                    _sendQueue.Enqueue(sendBuff);
+                }
+
+                if (_pendingList.Count == 0)
+                    RegisterSend();
+            }
         }
 
         public void Send(ArraySegment<byte> sendBuff)
