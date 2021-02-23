@@ -109,8 +109,6 @@ class {0} : IPacket
     public void Read(ArraySegment<byte> segment)
     {{
         ushort count = 0;
-
-        ReadOnlySpan<byte> s = new ReadOnlySpan<byte>(segment.Array, segment.Offset, segment.Count);
         count += sizeof(ushort);
         count += sizeof(ushort);
         
@@ -121,19 +119,14 @@ class {0} : IPacket
     {{
         ArraySegment<byte> sendBufferSegment = SendBufferHelper.Open(4096);
         ushort count = 0;
-        bool success = true;
-        Span<byte> s = new Span<byte>(sendBufferSegment.Array, sendBufferSegment.Offset,
-            sendBufferSegment.Count);
 
         count += sizeof(ushort);
-        success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)PacketID.{0});
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.{0}), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
         count += sizeof(ushort);
         
         {3}
 
-        success &= BitConverter.TryWriteBytes(s, count);    // Add Packet Size
-
-        if (success == false) return null;
+        Array.Copy(BitConverter.GetBytes(count), 0, sendBufferSegment.Array, sendBufferSegment.Offset, sizeof(ushort));    // Add Packet Size
 
         return SendBufferHelper.Close(count);
     }}
@@ -158,12 +151,12 @@ public struct {0}
 {{
     {2}
 
-    public void Read(ReadOnlySpan<byte> s, ref ushort count)
+    public void Read(ArraySegment<byte> segment, ref ushort count)
     {{
         {3}
     }}
 
-    public bool Write(Span<byte> s, ref ushort count)
+    public bool Write(ArraySegment<byte> segment, ref ushort count)
     {{
         bool success = true;
         {4}
@@ -175,7 +168,7 @@ public struct {0}
         // {1} : To~data type
         // {2} : member type
         public static string readFormat =
-@"this.{0} = BitConverter.{1}(s.Slice(count, s.Length - count));
+@"this.{0} = BitConverter.{1}(segment.Array, segment.Offset + count);
 count += sizeof({2});
 ";
 
@@ -187,16 +180,16 @@ count += sizeof({1});";
 
         // {0} : member name
         public static string readStringFormat =
-@"ushort {0}Len = BitConverter.ToUInt16(s.Slice(count, s.Length - count));
+@"ushort {0}Len = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
 count += sizeof(ushort);
-this.{0} = Encoding.Unicode.GetString(s.Slice(count, {0}Len));
+this.{0} = Encoding.Unicode.GetString(segment.Array, segment.Offset + count, {0}Len);
 count += {0}Len;";
 
         // {0} : list name [Upper case]
         // {1} : list name [lower case]
         public static string readListFormat =
 @"this.{1}s.Clear();
-ushort {1}Len = BitConverter.ToUInt16(s.Slice(count, s.Length - count));
+ushort {1}Len = BitConverter.ToUInt16(segment.Array, segment.Offset + count);
 count += sizeof(ushort);
 for (int i = 0; i < {1}Len; ++i)
 {{
@@ -208,7 +201,7 @@ for (int i = 0; i < {1}Len; ++i)
         // {0} : member name
         // {1} : member type
         public static string writeFormat =
-@"success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), this.{0});
+@"Array.Copy(BitConverter.GetBytes(this.{0}), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof({1}));
 count += sizeof({1});";
 
         // {0} : member name
@@ -221,18 +214,18 @@ count += sizeof({1});";
         public static string writeStringFormat =
 @"ushort {0}Len = (ushort)Encoding.Unicode.GetBytes(this.{0}, 0, {0}.Length,
 sendBufferSegment.Array, sendBufferSegment.Offset + count + sizeof(ushort));
-success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), {0}Len);
+Array.Copy(BitConverter.GetBytes({0}Len), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
 count += sizeof(ushort);
 count += {0}Len;";
 
         // {0} : list name [Upper case]
         // {1} : list name [lower case]
         public static string writeListFormat =
-@"success &= BitConverter.TryWriteBytes(s.Slice(count, s.Length - count), (ushort)this.{1}s.Count);
+@"Array.Copy(BitConverter.GetBytes((ushort)this.{1}s.Count), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
 count += sizeof(ushort);
 foreach({0} {1} in this.{1}s)
 {{
-    success &= {1}.Write(s, ref count);
+    success &= {1}.Write(sendBufferSegment, ref count);
 }}";
     }
 }
