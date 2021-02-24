@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Packet\ClientPacketManager.cs" />
     <Compile Include="Assets\Scripts\Packet\GenPackets.cs" />
     <Compile Include="Assets\Scripts\Packet\PacketHandler.cs" />
+    <Compile Include="Assets\Scripts\PacketQueue.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Users/User/Desktop/Unity/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

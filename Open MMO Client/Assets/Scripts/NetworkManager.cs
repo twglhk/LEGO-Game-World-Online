@@ -26,6 +26,12 @@ public class NetworkManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        IPacket packet = PacketQueue.Instance.Pop();
+        Debug.Log("Update");
+        if (packet != null)
+        {
+            Debug.Log("Packet!");
+            PacketManager.Instance.HandlePacket(_session, packet);
+        }
     }
 }
