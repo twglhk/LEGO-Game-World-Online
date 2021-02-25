@@ -12,7 +12,7 @@ namespace PacketGenerator
 using System;
 using System.Collections.Generic;
 
-class PacketManager
+public class PacketManager
 {{
     #region Singleton
     static PacketManager _instance = new PacketManager();
@@ -111,7 +111,7 @@ public interface IPacket
 
         public static string packetFormat =
 @"
-class {0} : IPacket
+public class {0} : IPacket
 {{
     {1}
 
@@ -128,16 +128,16 @@ class {0} : IPacket
 
     public ArraySegment<byte> Write()
     {{
-        ArraySegment<byte> sendBufferSegment = SendBufferHelper.Open(4096);
+        ArraySegment<byte> segment = SendBufferHelper.Open(4096);
         ushort count = 0;
 
         count += sizeof(ushort);
-        Array.Copy(BitConverter.GetBytes((ushort)PacketID.{0}), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
+        Array.Copy(BitConverter.GetBytes((ushort)PacketID.{0}), 0, segment.Array, segment.Offset + count, sizeof(ushort));
         count += sizeof(ushort);
         
         {3}
 
-        Array.Copy(BitConverter.GetBytes(count), 0, sendBufferSegment.Array, sendBufferSegment.Offset, sizeof(ushort));    // Add Packet Size
+        Array.Copy(BitConverter.GetBytes(count), 0, segment.Array, segment.Offset, sizeof(ushort));    // Add Packet Size
 
         return SendBufferHelper.Close(count);
     }}
@@ -153,8 +153,8 @@ class {0} : IPacket
         // {0} : list name [Upper case]
         // {1} : list name [Loser case]
         // {2} : member
-        // {2} : read member
-        // {3} : write member
+        // {3} : read member
+        // {4} : write member
         public static string memberListFormat =
 @"
 public List<{0}> {1}s = new List<{0}>();
@@ -205,38 +205,38 @@ count += sizeof(ushort);
 for (int i = 0; i < {1}Len; ++i)
 {{
     {0} {1} = new {0}();
-    {1}.Read(s, ref count);
+    {1}.Read(segment, ref count);
     {1}s.Add({1});
 }}";
 
         // {0} : member name
         // {1} : member type
         public static string writeFormat =
-@"Array.Copy(BitConverter.GetBytes(this.{0}), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof({1}));
+@"Array.Copy(BitConverter.GetBytes(this.{0}), 0, segment.Array, segment.Offset + count, sizeof({1}));
 count += sizeof({1});";
 
         // {0} : member name
         // {1} : member type
         public static string writeByteFormat =
-@"sendBufferSegment.Array[sendBufferSegment.Offset + count] = (byte)this.{0};
+@"segment.Array[segment.Offset + count] = (byte)this.{0};
 count += sizeof({1});";
 
         // {0} : member name
         public static string writeStringFormat =
 @"ushort {0}Len = (ushort)Encoding.Unicode.GetBytes(this.{0}, 0, {0}.Length,
-sendBufferSegment.Array, sendBufferSegment.Offset + count + sizeof(ushort));
-Array.Copy(BitConverter.GetBytes({0}Len), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
+segment.Array, segment.Offset + count + sizeof(ushort));
+Array.Copy(BitConverter.GetBytes({0}Len), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 count += sizeof(ushort);
 count += {0}Len;";
 
         // {0} : list name [Upper case]
         // {1} : list name [lower case]
         public static string writeListFormat =
-@"Array.Copy(BitConverter.GetBytes((ushort)this.{1}s.Count), 0, sendBufferSegment.Array, sendBufferSegment.Offset + count, sizeof(ushort));
+@"Array.Copy(BitConverter.GetBytes((ushort)this.{1}s.Count), 0, segment.Array, segment.Offset + count, sizeof(ushort));
 count += sizeof(ushort);
 foreach({0} {1} in this.{1}s)
 {{
-    success &= {1}.Write(sendBufferSegment, ref count);
+    {1}.Write(segment, ref count);
 }}";
     }
 }
