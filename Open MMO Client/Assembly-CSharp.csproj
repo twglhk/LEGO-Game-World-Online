@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MyPlayer.cs" />
     <Compile Include="Assets\Scripts\Network\Connector.cs" />
     <Compile Include="Assets\Scripts\Network\ReceiveBuffer.cs" />
     <Compile Include="Assets\Scripts\Network\SendBuffer.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets\Scripts\Packet\GenPackets.cs" />
     <Compile Include="Assets\Scripts\Packet\PacketHandler.cs" />
     <Compile Include="Assets\Scripts\PacketQueue.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Users/User/Desktop/Unity/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

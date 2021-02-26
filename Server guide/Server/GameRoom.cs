@@ -51,7 +51,7 @@ namespace Server
                 playerList.players.Add(new S_PlayerList.Player()
                 {
                     isSelf = (clientSession == session),
-                    playerId = session.SessionId,
+                    playerId = clientSession.SessionId,
                     posX = clientSession.PosX,
                     posY = clientSession.PosY,
                     posZ = clientSession.PosZ
@@ -59,7 +59,7 @@ namespace Server
             }
             session.Send(playerList.Write());
 
-            // Send the new player entering to other players
+            // Send other players the new player entered 
             S_BroadcastEnterGame enter = new S_BroadcastEnterGame();
             enter.playerId = session.SessionId;
             enter.posX = 0;
