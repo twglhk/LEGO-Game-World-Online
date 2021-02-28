@@ -20,6 +20,9 @@ ___
       - [ ] Porting 'GameRoom.cs' in Server guide/ to Unity
       - [ ] Porting 'JobTimer.cs' in Server guide/ to Unity
       - [ ] Porting all scripts in Server guide/Session to Unity
+      - [ ] Server hosting in Unity client
+      - [ ] Making game room in Unity client
+      - [ ] Entering host's game room in Unity client
 
 ___
 
