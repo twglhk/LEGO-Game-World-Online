@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OQcpJUwFM6mL6kbdfXTZZE7VWNKn5nqPiYuQcxuLkBO3PkcJYgeWm5aIZb/AtMhP+YjTCx7x3l0O2Iy7tZhZog==",
+  "dgSpecHash": "YOETIuatjyGpdLybPGj6NwwG4J/7BPTSPkSZyE2LfC7vd20FqlsRshqaN7fIVYbcLkvperJsvFp3M1rXFPZYlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

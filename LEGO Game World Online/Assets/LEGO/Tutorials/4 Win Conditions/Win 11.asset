@@ -16,7 +16,7 @@ MonoBehaviour:
     m_Items:
     - m_SceneObjectReference:
         m_SceneGuid: c117ceea613454843a1d1c28c25d7a94
-        m_GameObjectGuid: c51ed663-6f0c-447c-884d-0657ef509baf
+        m_GameObjectGuid: 75a6335c-a4c4-4563-a6dc-8bfb6b433b5a
         m_SerializedComponentType:
           m_TypeName: 
         m_ComponentIndex: 0

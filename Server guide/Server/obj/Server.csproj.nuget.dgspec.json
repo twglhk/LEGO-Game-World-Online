@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\Server.csproj": {}
+    "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj": {
+    "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\ServerCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\ServerCore.csproj",
         "projectName": "ServerCore",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\ServerCore.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\Server.csproj": {
+    "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\Server.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server Core\\ServerCore.csproj"
+              "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\ServerCore.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server Core\\ServerCore.csproj"
               }
             }
           }

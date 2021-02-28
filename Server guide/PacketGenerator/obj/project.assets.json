@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
       "projectName": "PacketGenerator",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\PacketGenerator\\PacketGenerator.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\PacketGenerator\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\PacketGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

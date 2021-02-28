@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qzFkACkqMIXs0gDv82i9oUwKoNkHWG7GXFz3tVNWUMWNj1SnvkIYjl2A0OFwLmpC1c6x2n3ueRL0bxHOfCbN+Q==",
+  "dgSpecHash": "c4mX5GglOuzbq+sSLC8YLH1LBpXuxllkOIsiNh5r7YNCaaK+NIqr5CLLJwrC4zOqrNwFRVfmWxqtIlG3viri2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\Open-MMORPG\\Server guide\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\LEGO Game World Online\\Server guide\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
