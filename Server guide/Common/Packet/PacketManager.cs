@@ -16,13 +16,33 @@ public class PacketManager
 
     Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc = new Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>>();
     Dictionary<ushort, Action<PacketSession, IPacket>> _handler = new Dictionary<ushort, Action<PacketSession, IPacket>>();
+    public bool IsHost { get; } = false;
 
     public void Register()
     {
-              _makeFunc.Add((ushort)PacketID.C_LeaveGame, MakePacket<C_LeaveGame>);
-        _handler.Add((ushort)PacketID.C_LeaveGame, PacketHandler.C_LeaveGameHandler);
-      _makeFunc.Add((ushort)PacketID.C_Move, MakePacket<C_Move>);
-        _handler.Add((ushort)PacketID.C_Move, PacketHandler.C_MoveHandler);
+        if (IsHost)
+        {
+              
+            _makeFunc.Add((ushort)PacketID.C_LeaveGame, MakePacket<C_LeaveGame>);
+            _handler.Add((ushort)PacketID.C_LeaveGame, PacketHandler.C_LeaveGameHandler);
+  
+            _makeFunc.Add((ushort)PacketID.C_Move, MakePacket<C_Move>);
+            _handler.Add((ushort)PacketID.C_Move, PacketHandler.C_MoveHandler);
+
+        }
+        
+          
+            _makeFunc.Add((ushort)PacketID.S_BroadcastEnterGame, MakePacket<S_BroadcastEnterGame>);
+            _handler.Add((ushort)PacketID.S_BroadcastEnterGame, PacketHandler.S_BroadcastEnterGameHandler);
+  
+            _makeFunc.Add((ushort)PacketID.S_BroadcastLeaveGame, MakePacket<S_BroadcastLeaveGame>);
+            _handler.Add((ushort)PacketID.S_BroadcastLeaveGame, PacketHandler.S_BroadcastLeaveGameHandler);
+  
+            _makeFunc.Add((ushort)PacketID.S_PlayerList, MakePacket<S_PlayerList>);
+            _handler.Add((ushort)PacketID.S_PlayerList, PacketHandler.S_PlayerListHandler);
+  
+            _makeFunc.Add((ushort)PacketID.S_BroadcastMove, MakePacket<S_BroadcastMove>);
+            _handler.Add((ushort)PacketID.S_BroadcastMove, PacketHandler.S_BroadcastMoveHandler);
 
     }
 

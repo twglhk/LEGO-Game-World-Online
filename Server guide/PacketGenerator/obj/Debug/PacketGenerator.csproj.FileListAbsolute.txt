@@ -11,3 +11,16 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\Pa
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.pdb
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Open-MMORPG\Server guide\PacketGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.exe
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.deps.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.runtimeconfig.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.runtimeconfig.dev.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.dll
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\bin\PacketGenerator.pdb
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.csprojAssemblyReference.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.AssemblyInfo.cs
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.dll
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.pdb
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\PacketGenerator\obj\Debug\PacketGenerator.genruntimeconfig.cache

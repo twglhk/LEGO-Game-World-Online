@@ -6,7 +6,8 @@ namespace PacketGenerator
 {
     class PacketFormat
     {
-        // {0} resister packet
+        // {0} host resister packet
+        // {1} client only resister packet
         public static string managerFormat =
 @"using ServerCore;
 using System;
@@ -26,10 +27,16 @@ public class PacketManager
 
     Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc = new Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>>();
     Dictionary<ushort, Action<PacketSession, IPacket>> _handler = new Dictionary<ushort, Action<PacketSession, IPacket>>();
+    public bool IsHost {{ get; }} = false;
 
     public void Register()
     {{
-        {0}
+        if (IsHost)
+        {{
+            {0}
+        }}
+        
+        {1}
     }}
 
     public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer, Action<PacketSession, IPacket> onRecvCallback = null)
@@ -72,8 +79,9 @@ public class PacketManager
 
         // {0} packet name
         public static string managerResisterFormat =
-@"      _makeFunc.Add((ushort)PacketID.{0}, MakePacket<{0}>);
-        _handler.Add((ushort)PacketID.{0}, PacketHandler.{0}Handler);";
+@"  
+            _makeFunc.Add((ushort)PacketID.{0}, MakePacket<{0}>);
+            _handler.Add((ushort)PacketID.{0}, PacketHandler.{0}Handler);";
 
         // {0} Packet name / number list
         // {1} Packet Classes list

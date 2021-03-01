@@ -64,19 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MyPlayer.cs" />
-    <Compile Include="Assets\Scripts\Network\Connector.cs" />
-    <Compile Include="Assets\Scripts\Network\ReceiveBuffer.cs" />
-    <Compile Include="Assets\Scripts\Network\SendBuffer.cs" />
-    <Compile Include="Assets\Scripts\Network\ServerSession.cs" />
-    <Compile Include="Assets\Scripts\Network\Session.cs" />
-    <Compile Include="Assets\Scripts\NetworkManager.cs" />
-    <Compile Include="Assets\Scripts\Packet\ClientPacketManager.cs" />
-    <Compile Include="Assets\Scripts\Packet\GenPackets.cs" />
-    <Compile Include="Assets\Scripts\Packet\PacketHandler.cs" />
-    <Compile Include="Assets\Scripts\PacketQueue.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Client\MyPlayer.cs" />
+    <Compile Include="Assets\Scripts\Network\Client\NetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Client\PacketQueue.cs" />
+    <Compile Include="Assets\Scripts\Network\Client\Player.cs" />
+    <Compile Include="Assets\Scripts\Network\Client\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Packet\GenPackets.cs" />
+    <Compile Include="Assets\Scripts\Network\Packet\PacketHandler.cs" />
+    <Compile Include="Assets\Scripts\Network\Packet\PacketManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\ClientSession.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\Connector.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\JobQueue.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\Listener.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\PriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\ReceiveBuffer.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\SendBuffer.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\ServerSession.cs" />
+    <Compile Include="Assets\Scripts\Network\Server Core\Session.cs" />
+    <Compile Include="Assets\Scripts\Network\Server\GameRoom.cs" />
+    <Compile Include="Assets\Scripts\Network\Server\JobTimer.cs" />
+    <Compile Include="Assets\Scripts\Network\Server\ServerManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Server\SessionManager.cs" />
+    <Compile Include="Assets\Scripts\Network\Server\TaskQueue.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\LEGO\LEGOMicrogame_README.txt" />

@@ -25,3 +25,19 @@ C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\bin\Debug\netcor
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CopyComplete
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Open-MMORPG\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.genruntimeconfig.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.exe
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.deps.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.runtimeconfig.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.runtimeconfig.dev.json
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.dll
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\DummyClient.pdb
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.dll
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\bin\Debug\netcoreapp3.1\ServerCore.pdb
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csprojAssemblyReference.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.AssemblyInfo.cs
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.csproj.CopyComplete
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.dll
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.pdb
+C:\Users\User\source\repos\LEGO Game World Online\Server guide\DummyClient\obj\Debug\netcoreapp3.1\DummyClient.genruntimeconfig.cache
