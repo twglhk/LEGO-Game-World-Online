@@ -15,15 +15,15 @@ ___
 ### 2021 Roadmap
  - Develope server build for Unity engine
     ###### [Develope server build for Unity engine] TO-DO List
-      - [ ] Porting 'Program.cs' in Server guide/ to Unity
-      - [ ] Porting 'GameRoom.cs' in Server guide/ to Unity
-      - [ ] Porting 'JobTimer.cs' in Server guide/ to Unity
-      - [ ] Porting all scripts in Server guide/Server Core/ to Unity
-      - [ ] Porting all scripts in Server guide/Server/Packet/ to Unity
-      - [ ] Porting all scripts in Server guide/Server/Session to Unity
-      - [ ] Modifying PacketManager string format in PacketFormat for both client and server
-      - [ ] Modifying GenPackets.bat for Unity path
-      - [ ] Server hosting in Unity client
+      - [X] Porting 'Program.cs' in Server guide/ to Unity
+      - [X] Porting 'GameRoom.cs' in Server guide/ to Unity
+      - [X] Porting 'JobTimer.cs' in Server guide/ to Unity
+      - [X] Porting all scripts in Server guide/Server Core/ to Unity
+      - [X] Porting all scripts in Server guide/Server/Packet/ to Unity
+      - [X] Porting all scripts in Server guide/Server/Session to Unity
+      - [X] Modifying PacketManager string format in PacketFormat for both client and server
+      - [X] Modifying GenPackets.bat for Unity path
+      - [X] Server hosting in Unity client
       - [ ] Making game room in Unity client
       - [ ] Entering host's game room in Unity client
 
