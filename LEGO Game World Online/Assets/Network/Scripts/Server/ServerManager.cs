@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using ServerCore;
-using Client;
 using System.Net;
+using Client;
+
 
 namespace Server
 {
@@ -23,6 +25,17 @@ namespace Server
         // Start is called before the first frame update
         void Start()
         {
+            DontDestroyOnLoad(gameObject);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            JobTimer.Instance.Flush();
+        }
+
+        public void Hosting()
+        {
             // DNS (Domain Name System)
             string host = Dns.GetHostName();
             IPHostEntry ipHost = Dns.GetHostEntry(host);
@@ -36,16 +49,14 @@ namespace Server
             if (clientNetworkManagerPrefab == null)
                 Debug.LogError($"{clientNetworkManagerPrefab} is not set");
 
-            // Create Host's server session
-            Instantiate(clientNetworkManagerPrefab);
+            var async = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+            async.completed += (AsyncOperation asyncOperation) => { 
+                // Create Host's server session
+                PacketManager.Instance.IsHost = true;
+                Instantiate(clientNetworkManagerPrefab);
+            };
 
             JobTimer.Instance.Push(FlushRoom);
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            JobTimer.Instance.Flush();
         }
     }
 }

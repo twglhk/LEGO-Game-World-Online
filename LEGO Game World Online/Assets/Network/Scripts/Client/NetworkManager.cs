@@ -17,6 +17,8 @@ public class NetworkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
+
         // DNS (Domain Name System)
         string host = Dns.GetHostName();                // Host Name
         IPHostEntry ipHost = Dns.GetHostEntry(host);    // Host Entry

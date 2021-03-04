@@ -16,7 +16,7 @@ public class PacketManager
 
     Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>> _makeFunc = new Dictionary<ushort, Func<PacketSession, ArraySegment<byte>, IPacket>>();
     Dictionary<ushort, Action<PacketSession, IPacket>> _handler = new Dictionary<ushort, Action<PacketSession, IPacket>>();
-    public bool IsHost { get; } = false;
+    public bool IsHost { get; set; } = false;
 
     public void Register()
     {

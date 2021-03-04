@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MyPlayer : Player
 {
@@ -10,6 +11,9 @@ public class MyPlayer : Player
     void Start()
     {
         networkManager = GameObject.FindObjectOfType<NetworkManager>().GetComponent<NetworkManager>();
+        var freelookCam = GameObject.FindObjectOfType<CinemachineFreeLook>().GetComponent<CinemachineFreeLook>();
+        freelookCam.LookAt = transform;
+        freelookCam.Follow = transform;
         StartCoroutine("CoSendPacket");
     }
 
@@ -20,9 +24,9 @@ public class MyPlayer : Player
             yield return new WaitForSeconds(0.25f);
 
             C_Move movePacket = new C_Move();
-            movePacket.posX = UnityEngine.Random.Range(-50f, 50f);
-            movePacket.posY = 0f;
-            movePacket.posZ = UnityEngine.Random.Range(-50f, 50f);
+            movePacket.posX = transform.position.x;
+            movePacket.posY = transform.position.y;
+            movePacket.posZ = transform.position.z;
 
             networkManager.Send(movePacket.Write());
         }

@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using ServerCore;
+using UnityEngine;
 
 namespace Server
 {
@@ -19,7 +20,8 @@ namespace Server
 
         public override void OnConnected(EndPoint endPoint)
         {
-            Console.WriteLine($"OnConnected : {endPoint}");
+            //Console.WriteLine($"OnConnected : {endPoint}");
+            Debug.Log($"OnConnected : {endPoint}");
 
             ServerLog._instance.WriteLog(endPoint);
             ServerManager.Room.Push(() => ServerManager.Room.Enter(this));
