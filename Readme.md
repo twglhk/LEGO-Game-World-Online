@@ -32,6 +32,8 @@ ___
 
 #### Battle Ship of Pirates (Project #1)
 
+ [!ship image](https://github.com/twglhk/LEGO-Game-World-Online/blob/main/Game%20Screen%20Shot/ship%20front.PNG?raw=true)
+
  The Game 'Battle Ship of Pirates' is 1 on 1 shooting game. 
  The player control the ship and sink the enemy's ship with cannon. 
 
