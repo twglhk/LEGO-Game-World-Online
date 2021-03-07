@@ -30,15 +30,21 @@ ___
       - [ ] Host Remote server in Unity client
 ___
 
- - LEGO GAME PROJECT #1
-    ###### [LEGO GAME PROJECT #1] TO-DO List
-      - [ ] Design game
- 
+#### Battle Ship of Pirates (Project #1)
+
+ The Game 'Battle Ship of Pirates' is 1 on 1 shooting game. 
+ The player control the ship and sink the enemy's ship with cannon. 
+
+   ###### [Battle Ship of Pirates] TO-DO List
+  - [X] Design game
+  - [ ] Add single play mode (for Unity's LEGO micro game contest) 
+  - [ ] Add Multiplay mode
 ___
 
- - LEGO GAME PROJECT #2
-    ###### [LEGO GAME PROJECT #2] TO-DO List
-      - [ ] Design game
+#### LEGO GAME PROJECT #2
+
+   ###### [LEGO GAME PROJECT #2] TO-DO List
+  - [ ] Design game
 
 ___
 
