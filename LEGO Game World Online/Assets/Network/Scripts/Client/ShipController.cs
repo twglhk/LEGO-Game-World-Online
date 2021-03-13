@@ -1,26 +1,42 @@
-﻿using System.Collections;
+﻿using LEGOModelImporter;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.LEGO.Behaviours;
+using Unity.LEGO.Game;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour
+
+
+namespace Unity.LEGO.Behaviours
 {
-    // Update is called once per frame
-    void Update()
+    public class ShipController : MonoBehaviour
     {
-        var moveVec = Vector3.zero;
+        public Brick shipBrick;
+        public float velocity;
+        public float maxVel;
+        private float rotateSpeed = 16.0f;
 
-        if (Input.GetKeyDown(KeyCode.W))
-            moveVec.x += 0.01f;
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKey(KeyCode.W))
+                velocity += 0.1f;
 
-        if (Input.GetKeyDown(KeyCode.S))
-            moveVec.x -= 0.01f;
+            if (Input.GetKey(KeyCode.S))
+                velocity -= 0.1f;
 
-        if (Input.GetKeyDown(KeyCode.A))
-            moveVec.z += 0.01f;
+            velocity -= 0.025f;
 
-        if (Input.GetKeyDown(KeyCode.D))
-            moveVec.z -= 0.01f;
+            velocity = Mathf.Clamp(velocity, 0f, maxVel);
+            transform.position += transform.forward * velocity * Time.deltaTime;
 
-        transform.position += moveVec;
+            Rotate3D();
+        }
+
+        void Rotate3D()
+        {
+            float h = Input.GetAxis("Horizontal");
+            transform.Rotate(0f, h * rotateSpeed * Time.deltaTime, 0f);
+        }
     }
 }

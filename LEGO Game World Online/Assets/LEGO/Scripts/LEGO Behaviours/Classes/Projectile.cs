@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.LEGO.Game;
 using Unity.LEGO.Minifig;
 using Unity.LEGO.Behaviours.Actions;
+using Assets.LEGO.Scripts.LEGO_Behaviours;
 
 namespace Unity.LEGO.Behaviours
 {
@@ -108,29 +109,37 @@ namespace Unity.LEGO.Behaviours
             }
         }
 
-        void OnCollisionEnter(Collision collision)
+        void OnTriggerEnter(Collider collider)
         {
-            // Check if the player was hit.
-            if (Deadly && collision.collider.gameObject.CompareTag("Player"))
-            {
-                // If the player is a minifig or a brick, do an explosion.
-                var minifigController = collision.collider.GetComponent<MinifigController>();
-                if (minifigController)
-                {
-                    minifigController.Explode();
-                }
-                else
-                {
-                    var brick = collision.collider.GetComponentInParent<Brick>();
-                    if (brick)
-                    {
-                        BrickExploder.ExplodeConnectedBricks(brick);
-                    }
-                }
+            Debug.Log($"[Hit] {collider.gameObject.name}");
 
-                GameOverEvent evt = Events.GameOverEvent;
-                evt.Win = false;
-                EventManager.Broadcast(evt);
+            // Check if the player was hit.
+            if (Deadly && collider.transform.CompareTag("Ship"))
+            {
+                //// If the player is a minifig or a brick, do an explosion.
+                //var minifigController = collision.collider.GetComponent<MinifigController>();
+                //if (minifigController)
+                //{
+                //    minifigController.Explode();
+                //}
+                //else
+                //{
+                //    var brick = collision.collider.GetComponentInParent<Brick>();
+                //    if (brick)
+                //    {
+                //        BrickExploder.ExplodeConnectedBricks(brick);
+                //    }
+                //}
+
+                var shipInfo = collider.GetComponentInParent<ShipInfo>();
+                if (shipInfo == null)
+                    Debug.Log("ShipInfo NULL!");
+
+                shipInfo.MinusHp();
+
+                //GameOverEvent evt = Events.GameOverEvent;
+                //evt.Win = false;
+                //EventManager.Broadcast(evt);
             }
 
             // Turn on gravity and make non-deadly.

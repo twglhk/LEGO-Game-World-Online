@@ -1,3 +1,58 @@
-LEGO Game World Online/Library/
-LEGO Game World Online/Temp/
-Build/
+# Created by performance test
+LEGO Game World Online/Assets/StreamingAssets/
+LEGO Game World Online/Assets/StreamingAssets.meta
+LEGO Game World Online/Assets/Resources
+LEGO Game World Online/Assets/Resources.meta
+
+# =============== #
+# Unity generated #
+# =============== #
+LEGO Game World Online/Source/Temp/
+LEGO Game World Online/Source/Library/
+
+# ===================================== #
+# Project specific #
+# ===================================== #
+LEGO Game World Online/Database.sqlite
+LEGO Game World Online/Database/
+
+# ===================================== #
+# Visual Studio / MonoDevelop / Rider   #
+# ===================================== #
+LEGO Game World Online/ExportedObj/
+LEGO Game World Online/obj/
+LEGO Game World Online/*.svd
+LEGO Game World Online/*.userprefs
+LEGO Game World Online/*.csproj
+LEGO Game World Online/Source/Assembly-CSharp.csproj
+LEGO Game World Online/Source/Assembly-CSharp-Editor.csproj
+LEGO Game World Online/Source/Assembly-CSharp-firstpass.csproj
+LEGO Game World Online/Source/Source.sln
+LEGO Game World Online/*.pidb
+LEGO Game World Online/*.suo
+LEGO Game World Online/*.sln
+LEGO Game World Online/*.user
+LEGO Game World Online/*.unityproj
+LEGO Game World Online/*.booproj
+LEGO Game World Online/Output/
+LEGO Game World Online/bin/
+LEGO Game World Online/.vs/
+LEGO Game World Online/.idea/
+LEGO Game World Online/packages
+LEGO Game World Online/.mfractor
+
+# Unity generated
+LEGO Game World Online/Library
+LEGO Game World Online/Temp
+UnityPackageManager
+LEGO Game World Online/CodeCoverage
+LEGO Game World Online/Logs
+LEGO Game World Online/Obj
+LEGO Game World Online/*.mdb
+LEGO Game World Online/*.mdb.meta
+
+LEGO Game World Online/.sonarqube
+LEGO Game World Online/CodeCoverage
+LEGO Game World Online/ProjectSettings
+
+Builds/
